@@ -58,10 +58,13 @@ class VentureCapitalist
     #identify unique rounds to this vc
     #go through my startups and identify the domain 
     #if domain string == the startup domain, return the startup investment 
-    myStartupRound = FundingRound.all.find do |round|
+    myStartupRound = FundingRound.all.select do |round|
       round.startup.domain == domain
     end
-    myStartupRound.investment 
+    myInvestment = myStartupRound.map do |round|
+      round.investment
+    end
+    myInvestment.sum
   end
 
   
