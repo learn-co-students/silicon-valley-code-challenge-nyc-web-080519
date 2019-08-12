@@ -20,4 +20,26 @@ class VentureCapitalist
         end
     end
 
+    # Associations and Aggregate Methods start below
+
+    def offer_contract
+
+    end
+
+    def funding_rounds
+
+    end
+
+    def portfolio
+
+    end
+
+    def biggest_investment
+
+    end
+
+    def invested
+
+    end
+
 end
